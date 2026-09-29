@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JARVIS Career Agent</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="voice-bg" aria-hidden="true"></div>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <h1>JARVIS Career Agent</h1>
+        </div>
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>Online</span>
+        </div>
+      </header>
+
+      <div class="subtitle">Your AI Job Search &amp; Career Operating System</div>
+
+      <main class="main-panel">
+        <aside class="sidebar">
+          <nav class="nav-menu">
+            <button class="nav-item active">Dashboard</button>
+            <button class="nav-item">Job Search</button>
+            <button class="nav-item">Resume</button>
+            <button class="nav-item">Applications</button>
+            <button class="nav-item">Interviews</button>
+            <button class="nav-item">Skill Gaps</button>
+            <button class="nav-item">Settings</button>
+          </nav>
+        </aside>
+
+        <section class="content-panel">
+          <div class="tab-panel active" data-tab="dashboard">
+            <div class="greeting">Good afternoon.</div>
+            <div class="prompt-line">What should I work on?</div>
+
+            <div class="quick-actions">
+              <button class="action-btn" data-query="Find AI Developer jobs">Find AI Jobs</button>
+              <button class="action-btn" data-query="Analyze this job description">Analyze a Job</button>
+              <button class="action-btn" data-query="Prepare my application for a role">Prepare Application</button>
+              <button class="action-btn" data-query="Prepare interview answers for a product manager role">Interview Prep</button>
+            </div>
+
+            <div class="chat-box">
+              <div class="chat-line user-line">
+                <span class="label">You:</span>
+                <span>Find AI Developer roles</span>
+              </div>
+              <div class="chat-line user-line secondary">
+                <span class="label">&nbsp;</span>
+                <span>posted in last 24 hours</span>
+              </div>
+
+              <div class="chat-line assistant-line">
+                <span class="label">JARVIS:</span>
+                <span id="assistant-response">I found 9 roles. 3 are strong fits.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-tab="job-search">
+            <div class="greeting">Job Search</div>
+            <div class="prompt-line">Find the strongest-fit opportunities and track your focus quickly.</div>
+            <div class="tab-card">
+              <p>Search for product, design, engineering, and agile roles.</p>
+              <p>Use the assistant to compare role fit, salary range, company stage, and next-step strategy.</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-tab="resume">
+            <div class="greeting">Resume</div>
+            <div class="prompt-line">Improve impact language, ATS fit, and keyword alignment.</div>
+            <div class="tab-card">
+              <p>Check for missing skills, weak summaries, and stronger title alignment.</p>
+              <p>Ask JARVIS to rewrite bullet points or tailor your resume for each role.</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-tab="applications">
+            <div class="greeting">Applications</div>
+            <div class="prompt-line">Track outreach, follow-up tasks, and decision points.</div>
+            <div class="tab-card">
+              <p>Prepare application messages, status tracking, and follow-up timing.</p>
+              <p>Stay consistent across every role and recruiter touchpoint.</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-tab="interviews">
+            <div class="greeting">Interviews</div>
+            <div class="prompt-line">Practice targeted answers with role-based interview prep.</div>
+            <div class="tab-card">
+              <p>Improve behavioral stories, technical responses, and job-specific talking points.</p>
+              <p>Run a mock interview and get actionable feedback instantly.</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-tab="skill-gaps">
+            <div class="greeting">Skill Gaps</div>
+            <div class="prompt-line">Identify what to learn next and how to close the gap.</div>
+            <div class="tab-card">
+              <p>Compare your current strengths to target roles and build a learning roadmap.</p>
+              <p>Focus on the most valuable skills that improve interview and hiring outcomes.</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-tab="settings">
+            <div class="greeting">Settings</div>
+            <div class="prompt-line">Manage profile preferences, LinkedIn OAuth, and job provider configuration.</div>
+            <div class="tab-card">
+              <p>Connect your secure provider credentials and personalize the assistant.</p>
+              <p>Keep profile memory, preferences, and workflow settings synced.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="composer">
+        <button id="mic-btn" class="mic-btn" type="button" aria-label="Use voice input">🎤</button>
+        <input id="assistant-input" type="text" value="Ask JARVIS anything..." aria-label="Ask JARVIS anything" />
+        <button id="send-btn" class="send-btn">Send</button>
+      </footer>
+    </div>
+
+    <div class="voice-center">
+      <div class="microphone-ring"></div>
+      <div class="microphone-core">
+        <span>🎤</span>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
